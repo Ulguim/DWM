@@ -10,15 +10,15 @@ gulpProcess.stderr.on('data', function(data) {
   console.error('Gulp error: ' + data.toString());
 });
 
-const timeout = 20000; // Tempo limite em milissegundos (60 segundos)
+const timeout = 20000;
 
 const timer = setTimeout(function() {
   console.log('Tempo limite excedido. Encerrando o processo Gulp.');
-  process.kill(process.pid, 'SIGKILL'); // Encerra o processo Gulp enviando um sinal SIGINT
+  process.kill(gulpProcess.pid, 'SIGKILL'); 
 }, timeout);
 
-// gulpProcess.on('exit', function(code) {
-//   clearTimeout(timer); // Limpa o temporizador
-//   console.log('Gulp process exited with code ' + code);
-//   process.kill(process.pid, 'SIGKILL');
-// });
+gulpProcess.on('exit', function(code) {
+  clearTimeout(timer); 
+  console.log('Gulp process exited with code ' + code);
+  process.exit(); 
+});
