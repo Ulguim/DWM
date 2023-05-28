@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="../src/components/defaultText.html">
+    </link>
+    <link rel="stylesheet" href="../src/css/index.css">
+    <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+    <title>DWM</title>
+</head>
+<header>
+    <nav class="nav">
+        <div class="nav__logo">
+          <p>FOODMOOD</p>
+        </div>
+        <div class="nav__menu">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>       
+        </div>
+
+        <button class="download-button">Download Now!</button>
+    
+    </nav>
+</header>
+<body>
+
+    <section class="mainBox">
+        @@include('../src/components/defaultText.html')
+    </section>
+    <section class="categories">
+        <div class="categories__grid">
+            @@loop('../src/components/categoriesGrid.html',[ { "category":"Pizza","description":"20 Restaurants Foods" ,"url":'/src/assets/img/pizza.png'} , 
+            { "category":"Pasta","description":"15 Restaurants Foods" ,"url":'/src/assets/img/pasta.png'}, 
+            { "category":"Shakes","description":"20 Restaurants Foods" ,"url":'/src/assets/img/sorvete.png'},
+            { "category":"Burger","description":"20 Restaurants Foods" ,"url":'/src/assets/img/burguer.png'}])
+
+        </div>
+    </section>
+    <section class="features">
+        <div class="features__grid">
+            @@loop('../src/components/features.html',[ { "category":"Pizza","description":"Free Shipping on First Order" ,"url":'/src/assets/img/truckIcon.png'} , 
+            { "category":"Pasta","description":"Variety of Dishes" ,"url":'/src/assets/img/buguerIcon.png'}, 
+            { "category":"Burger","description":"Thirty Minutes Delivery" ,"url":'/src/assets/img/clockIten.png'}])
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>
