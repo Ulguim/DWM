@@ -62,7 +62,17 @@
 
         </div>
     </section>
+    <section class="partners">   
+        <div class="partners__grid">  
+            @@loop('../src/components/gridImage.html',[ {"url":'/src/assets/img/foodchef.png',"alt":"alt"},{"url":'/src/assets/img/Lezatoz.png',"alt":"alt"},
+            {"url":'/src/assets/img/chefgateng.png',"alt":"alt"},{"url":'/src/assets/img/tastyfood.png',"alt":"alt"}
+            ])
+        </div>
+    </section>
 
+    <footer>
+        @@include('../src/components/footer.html')
+    </footer>
    
 </body>
 

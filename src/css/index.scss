@@ -13,6 +13,13 @@ header {
     width: 100%;
 }
 
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
 .nav {
     background-color: transparent;
     display: flex;
@@ -36,6 +43,7 @@ header {
         }
 
         .burguerButton {
+            display: block !important;
             height: 25px;
             margin-bottom: auto;
             margin-left: 10px;
@@ -44,6 +52,7 @@ header {
         }
 
         .topNav {
+            display: block !important;
             background-color: #2A2356;
             border-radius: 5px;
             display: block;
@@ -389,4 +398,104 @@ header {
             width: 115px;
         }
     }
+}
+
+.partners {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    &__grid {
+        min-height: 400px;
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        img{
+            height: 200px;
+            width: 278px;
+        }
+        @media  (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+           
+        }
+        @media  (max-width: 768px) {
+            grid-template-columns: 1fr;
+           
+        }
+    }
+}
+
+.footer {
+
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: center;
+    width: 100%;
+
+
+
+    &__grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-inline: auto;
+        max-width: 80%;
+
+        h3 {}
+
+        .companyLogo {
+            color: #FFCC00;
+
+        }
+
+        .paragraph {
+            color: #231900;
+
+            font-family: 'Poppins-lighter', sans-serif;
+            font-size: 14px;
+            font-weight: lighter !important;
+            text-align: start;
+        }
+
+        @media (max-width: 1160px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+
+        .lists {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            text-align: start;
+
+            width: 100%;
+
+            ul {
+                color: #231900;
+                font-size: 17px;
+                list-style-type: none;
+                padding: 0;
+                text-decoration: none;
+            }
+
+            ul>li {
+                color: #231900;
+
+                font-family: 'Poppins-lighter', sans-serif;
+                font-size: 14px;
+                font-weight: lighter !important;
+                text-align: start;
+            }
+        }
+    }
+
+
 }
