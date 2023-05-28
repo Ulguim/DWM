@@ -1,12 +1,6 @@
 # Nome do Aplicativo
 
-Landing Page FOODMOD 
-
-## Requisitos
-
-- Node.js (versão 12.12.0 ou superior)
-
-## Instalação
+Landing Page [FOOMOD](https://dwm.bohr.io/)
 
 1. Certifique-se de ter o Node.js instalado em seu sistema. Caso não tenha, faça o download e a instalação a partir do [site oficial do Node.js](https://nodejs.org).
 
