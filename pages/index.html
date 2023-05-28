@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="../src/css/index.css">
     <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-
+    <script src="../src/assets/js/hideNav.js"></script>
     <title>DWM</title>
 </head>
 <header>
     <nav class="nav">
+  
+            <img  class="burguerButton" style="width: 25px; height: 25px; margin-top: auto;margin-bottom: auto;" src="../src/assets/img/navbar.png" alt="burguerButton" onclick="handleTopnav()">
+      
         <div class="nav__logo">
+            
           <p>FOODMOOD</p>
         </div>
         <div class="nav__menu">
@@ -26,7 +30,14 @@
         </div>
 
         <button class="download-button">Download Now!</button>
-    
+        <div id="topNav" class="topNav">  
+            <div class="topNav__menu">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>       
+            </div>
+        </div>
     </nav>
 </header>
 <body>
@@ -52,7 +63,7 @@
         </div>
     </section>
 
-
+   
 </body>
 
 </html>
